@@ -1,0 +1,79 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #dedede;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.calculator {
+  background: #eeeeee;
+  border-radius: 10px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 32px 24px 24px 24px;
+  width: 340px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+}
+
+.calc-display-main {
+  font-size: 48px;
+  color: #222;
+  text-align: right;
+  margin-bottom: 4px;
+}
+
+.calc-display-sub {
+  font-size: 18px;
+  color: #1e90ff;
+  text-align: right;
+  margin-bottom: 20px;
+  min-height: 18px;
+}
+
+.calculator-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+}
+
+.btn {
+  background: none;
+  border: none;
+  border-radius: 6px;
+  font-size: 21px;
+  color: #222;
+  padding: 18px 0;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+.btn:hover {
+  background: #f0f4fa;
+  color: #1e90ff;
+}
+
+.btn-equals {
+  background: #1e90ff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 24px;
+  grid-column: 4 / 5;
+  grid-row: 5 / 6;
+  align-self: stretch;
+  justify-self: stretch;
+  transition: background 0.15s;
+}
+
+.btn-equals:hover {
+  background: #1877cc;
+}
+
+.btn:focus, .btn-equals:focus {
+  outline: none;
+} 
