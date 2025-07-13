@@ -41,8 +41,6 @@ function calculateResult(expression) {
 
   tokens.push(num); // Push the last number
 
-  // [123, "+", 456, "-", 789]
-
   console.log("Tokens:", tokens)
 
   let result = 0;
@@ -106,7 +104,8 @@ function calculateResult(expression) {
 
   console.log("After Multiplication/Division:", tokens)
 
-  return parseFloat(tokens[0]);
+  // '.toFixed() is used to limit the decimal value to 3 eg. 1.222
+  return parseFloat(parseFloat(tokens[0]).toFixed(3));
 }
 
 
